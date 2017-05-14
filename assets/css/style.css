@@ -1,0 +1,48 @@
+/*Global IDs*/
+
+h2 {
+	font-family: arial;
+	font-weight: bold;
+	color: #ffffff;
+	text-align: center;
+}
+
+h4 {
+	font-family: arial;
+	color: #ffffff;
+	text-align: center;
+}
+
+footer {
+	font-family: arial;
+	font-weight: bold;
+	color: #ffffff;
+	background-color: #666666;
+	text-align: center;
+	margin: 40px 0 0 0;
+	height: 100px;
+	padding: 40px;
+	border-top: 10px;
+	border-style: solid;
+	border-color: #cccccc;
+}
+
+/*Classes*/
+
+.jumbotron {
+	background-color: #666666;
+}
+
+.col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+	text-align: center;
+}
+
+.col-xs-6, .col-sm-6, .col-md-6, .col-lg-6 {
+	text-align: center;
+}
+
+/*Individual IDs*/
+
+#bodybackground {
+	background-image: url:(../images/background.png);
+}
