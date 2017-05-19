@@ -1,6 +1,20 @@
 Credit to Horton Consulting for javaScript inspiration.
 
-CHANGELOG:
+CHANGELOG (Read from bottom to top):
+
+20150519
+
+GAME.JS: Literally re-wrote the entire game.js file during lunch and intentionally broke the code during testing.
+
+Found the bug at 1740. Line 83 had "guess[i]" instead of "word[i]" which caused the onkey input to fail horribly. Thankfully that's out of the way. Now on to CSS modifications. Also, removed the "RESET" button because it's being a jerk and I don't want to deal with it right now.
+
+20150518
+
+GAME.JS: Sought assistance with the onkeyup function. I feel like it may be due to an error regarding the variables used within the game.js file. Not entirely sure, will continue to work on it.
+
+20170516
+
+GAME.JS: Attempted onkeyup functions with great failure. Spent about 2 hours working on this alone before calling it a night.
 
 20170513
 

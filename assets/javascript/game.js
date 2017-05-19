@@ -72,7 +72,27 @@ window.onload = function() {
 			wordHolder.appendChild(correct);
 			correct.appendChild(guess);
 		}
-	};
+	}
+
+		//key up functionality
+		document.onkeyup = function(input) {
+			var guess = (input.key).toLowerCase();
+
+			for (var i = 0; i < word.length; i++) {
+				if (word[i] === guess) {
+					guesses[i].innerHTML = word[i];
+					counter += 1;
+				}
+			}
+
+			var j = (word.indexOf(guess));
+			if (j === -1) {
+				lives -= 1;
+				comments();
+			} else {
+				comments();
+			}
+		}
 
 	//lives display
 	comments = function () {
@@ -89,10 +109,7 @@ window.onload = function() {
 				showLives.innerHTML = "YOU WIN!";
 			}
 		}
-	};
-
-	//key up functionality
-
+	}
 
 	//play and categories object
 	play = function () {
@@ -105,9 +122,8 @@ window.onload = function() {
 
 		chosenCategory = categories[Math.floor(Math.random() * categories.length)];
 		word = chosenCategory[Math.floor(Math.random() * chosenCategory.length)];
-		word = word.replace(/\s/g, "-");
+		word = word.replace(/\s+/g, "-");
 		console.log(word);
-		// buttons();
 
 		guesses = [ ];
 		lives = 10;
@@ -116,8 +132,7 @@ window.onload = function() {
 		result();
 		comments();
 		selectCat();
-		// canvas();
-	};
+	}
 
 	play();
 
@@ -134,15 +149,7 @@ window.onload = function() {
 		var categoryIndex = categories.indexOf(chosenCategory);
 		var hintIndex = chosenCategory.indexOf(word);
 		showClue.innerHTML = "Clue: - " + hints [categoryIndex][hintIndex];
-	};
-
-	//reset
-	document.getElementById('reset').onclick = function() {
-		correct.parentNode.removeChild(correct);
-		letters.parentNode.removeChild(letters);
-		showClue.innerHTML = "";
-		context.clearRect(0, 0, 400, 400);
-		play();
 	}
+
 }
 
