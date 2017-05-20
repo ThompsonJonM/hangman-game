@@ -78,20 +78,20 @@ window.onload = function() {
 		document.onkeyup = function(input) {
 			var guess = (input.key).toLowerCase();
 
-			for (var i = 0; i < word.length; i++) {
-				if (word[i] === guess) {
-					guesses[i].innerHTML = word[i];
-					counter += 1;
+				for (var i = 0; i < word.length; i++) {
+					if (word[i] === guess) {
+						guesses[i].innerHTML = word[i];
+						counter += 1;
+					}
 				}
-			}
 
-			var j = (word.indexOf(guess));
-			if (j === -1) {
-				lives -= 1;
-				comments();
-			} else {
-				comments();
-			}
+				var j = (word.indexOf(guess));
+				if (j === -1) {
+					lives -= 1;
+					comments();
+				} else {
+					comments();
+				}
 		}
 
 	//lives display
@@ -114,9 +114,9 @@ window.onload = function() {
 	//play and categories object
 	play = function () {
 		categories = [
-			["master-chief", "covenant", "reach", "the-flood"],
-			["jiggy", "mumbo-jumbo", "mad-monster-mansion", "grunty"],
-			["thunderfury", "burning-crusade", "arthas", "legion"],
+			["masterchief", "covenant", "reach", "theflood"],
+			["jinjos", "mumbojumbo", "madmonstermansion", "grunty"],
+			["thunderfury", "burningcrusade", "arthas", "legion"],
 			["djinn", "adept", "doom-dragon", "lighthouse"]
 		];
 

@@ -8,6 +8,8 @@ GAME.JS: Literally re-wrote the entire game.js file during lunch and intentional
 
 Found the bug at 1740. Line 83 had "guess[i]" instead of "word[i]" which caused the onkey input to fail horribly. Thankfully that's out of the way. Now on to CSS modifications. Also, removed the "RESET" button because it's being a jerk and I don't want to deal with it right now.
 
+Added background from peakofserenity.com and completed the media queries. Game is now responsive in 980, 768, and 640px for all devices.
+
 20150518
 
 GAME.JS: Sought assistance with the onkeyup function. I feel like it may be due to an error regarding the variables used within the game.js file. Not entirely sure, will continue to work on it.

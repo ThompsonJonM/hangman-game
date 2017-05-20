@@ -19,7 +19,7 @@ footer {
 	color: #ffffff;
 	background-color: #666666;
 	text-align: center;
-	margin: 40px 0 0 0;
+	margin: 10px 0 0 0;
 	height: 100px;
 	padding: 40px;
 	border-top: 10px;
@@ -31,20 +31,23 @@ footer {
 
 .jumbotron {
 	background-color: #666666;
+	margin: 0 0 10px 0;
 }
 
 .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
 	text-align: center;
-}
-
-.col-xs-6, .col-sm-6, .col-md-6, .col-lg-6 {
-	text-align: center;
+	background-color: #ffffff;
+	padding: 10px 10px 10px 10px;
 }
 
 /*Individual IDs*/
 
 #bodybackground {
-	background-image: url:(../images/background.png);
+	background-image: url(../images/background.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 750px;
+
 }
 
 #hold {
@@ -53,10 +56,64 @@ footer {
 }
 
 #my-word li {
-  position: relative;
-  list-style: none;
-  margin: 0;
   display: inline-block;
-  padding: 0 10px;
-  font-size: 1.6em;
+  padding: 15px;
+  font-size: 20px;
+}
+
+#page-content {
+	padding: 200px 0 0 0;
+}
+
+#entry-content {
+	border: 10px;
+	border-style: solid;
+	border-color: #cccccc;
+	margin: 0 357px 0 357px;
+}
+
+/*Queries*/
+
+@media screen and (max-width: 980px) {
+
+	/*Classes*/
+
+	.col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+		width: 75%;
+	}
+
+	/*Individual IDs*/
+
+	#entry-content {
+		margin: 0 190px 0 190px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+
+	/*Classes*/
+
+	.col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+		width: 65%;
+	}
+
+	/*Individual IDs*/
+
+	#entry-content {
+		margin: 0 130px 0 130px;
+	}
+}
+
+@media screen and (max-width: 640px) {
+		/*Classes*/
+
+	.col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+		width: 100%;
+	}
+
+	/*Individual IDs*/
+
+	#entry-content {
+		margin: 0 130px 0 130px;
+	}
 }
