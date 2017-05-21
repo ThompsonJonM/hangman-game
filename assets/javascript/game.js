@@ -31,6 +31,7 @@ window.onload = function() {
 	var showCategory = document.getElementById("scategory");
 	var getHint = document.getElementById("hint");
 	var showClue = document.getElementById("clue");
+	var displayGuess = document.getElementById("guessdisplay");
 
 	//category select between four different titles
 	//chosen at random for each game
@@ -87,6 +88,8 @@ window.onload = function() {
 			} else {
 				comments();
 			}
+
+			displayGuess.innerHTML = "Guesses: " + guess;
 		}
 
 	//lives display
@@ -95,6 +98,10 @@ window.onload = function() {
 		
 		if (lives < 1) {
 			alert("GAME OVER");
+		}
+
+		if (counter === guesses.length) {
+			alert("YOU WIN!")
 		}
 	}
 
@@ -113,7 +120,7 @@ window.onload = function() {
 		console.log(word);
 
 		guesses = [ ];
-		lives = 11;
+		lives = 10;
 		counter = 0;
 		result();
 		comments();
@@ -134,7 +141,7 @@ window.onload = function() {
 
 		var categoryIndex = categories.indexOf(chosenCategory);
 		var hintIndex = chosenCategory.indexOf(word);
-		showClue.innerHTML = "Clue: - " + hints [categoryIndex][hintIndex];
+		showClue.innerHTML = "Clue: " + hints [categoryIndex][hintIndex];
 	}
 
 }
