@@ -1,9 +1,5 @@
 window.onload = function() {
 
-	//letters in the alphabet that can be chosen
-	var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 
-	'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-
 	//array of topics
 	var categories;
 
@@ -63,7 +59,6 @@ window.onload = function() {
 
 			if (word[i] === "-") {
 				guess.innerHTML = "-";
-				space = 1;
 			} else {
 				guess.innerHTML = "_";
 			}
@@ -74,24 +69,24 @@ window.onload = function() {
 		}
 	}
 
-		//key up functionality
-		document.onkeyup = function(input) {
-			var guess = (input.key).toLowerCase();
+	//key up functionality
+	document.onkeyup = function(input) {
+		var guess = (input.key).toLowerCase();
 
-				for (var i = 0; i < word.length; i++) {
-					if (word[i] === guess) {
-						guesses[i].innerHTML = word[i];
-						counter += 1;
-					}
+			for (var i = 0; i < word.length; i++) {
+				if (word[i] === guess) {
+					guesses[i].innerHTML = word[i];
+					counter = 1;
 				}
+			}
 
-				var j = (word.indexOf(guess));
-				if (j === -1) {
-					lives -= 1;
-					comments();
-				} else {
-					comments();
-				}
+			var j = (word.indexOf(guess));
+			if (j === -1) {
+				lives -= 1;
+				comments();
+			} else {
+				comments();
+			}
 		}
 
 	//lives display
@@ -99,15 +94,7 @@ window.onload = function() {
 		showLives.innerHTML = "You have " + lives + " lives";
 		
 		if (lives < 1) {
-			showLives.innerHTML - "GAME OVER";
-		}
-
-		//for loop
-		for (var i = 0; i < guesses.length; i++) {
-
-			if (counter + space === guesses.length) {
-				showLives.innerHTML = "YOU WIN!";
-			}
+			alert("GAME OVER");
 		}
 	}
 
@@ -122,13 +109,12 @@ window.onload = function() {
 
 		chosenCategory = categories[Math.floor(Math.random() * categories.length)];
 		word = chosenCategory[Math.floor(Math.random() * chosenCategory.length)];
-		word = word.replace(/\s+/g, "-");
+		word = word.replace(/\s/g, "-");
 		console.log(word);
 
 		guesses = [ ];
-		lives = 10;
+		lives = 11;
 		counter = 0;
-		space = 0;
 		result();
 		comments();
 		selectCat();

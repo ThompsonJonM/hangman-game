@@ -2,13 +2,17 @@ Credit to Horton Consulting for javaScript inspiration.
 
 CHANGELOG (Read from bottom to top):
 
+20150520
+
+STYLE.CSS: Improved on the css portion. Should be all finished.
+
 20150519
 
 GAME.JS: Literally re-wrote the entire game.js file during lunch and intentionally broke the code during testing.
 
 Found the bug at 1740. Line 83 had "guess[i]" instead of "word[i]" which caused the onkey input to fail horribly. Thankfully that's out of the way. Now on to CSS modifications. Also, removed the "RESET" button because it's being a jerk and I don't want to deal with it right now.
 
-Added background from peakofserenity.com and completed the media queries. Game is now responsive in 980, 768, and 640px for all devices.
+STYLE.CSS: Added background from peakofserenity.com and completed the media queries. Game is now responsive in 980, 768, and 640px for all devices.
 
 20150518
 
